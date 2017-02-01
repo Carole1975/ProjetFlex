@@ -3,7 +3,7 @@
 	flex-direction: row;
 	min-height: 80px;
 	padding: 2px;
-	border: 3px dotted #88429b;
+	border: 3px dotted #82C46C;
 }
 .flex-item{}
 .de {
@@ -16,4 +16,13 @@
 .options{
 	display: flex;
 	justify-content: space-around;
+	color : #82C46C;
+	
+}
+.color {
+	color: #88429b;
+}
+.deco{
+	color: #82C46C;
+	text-align: center;
 }
