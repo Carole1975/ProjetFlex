@@ -62,7 +62,28 @@
 
 <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
 <script type="text/javascript">
-	
+	$(document).ready(function(){
+        // changer les valeurs des propriétés du container
+        // propriété flex-direction
+        $('#changerDirection').change(function(){
+            var directionAAppliquer = $('#changerDirection').val();
+            $('.flex-container').css('flex-direction', directionAAppliquer);
+        });
+        // propriété align-items
+        $('#changerAlignItems').change(function(){
+            var alignItemAAppliquer = $('#changerAlignItems').val();
+            $('.flex-container').css('align-items', alignItemAAppliquer);
+        });
+
+        // changer les valeurs des propriétés des items
+        // propriété flex-grow
+        $('#changerFlexGrow').change(function(){
+            var flexGrowAAppliquer = $('#changerFlexGrow').val();
+            var deSelectionne = $('#selectionnerDe').val();
+            console.log('appliquer une valeur flex-grow de ' + flexGrowAAppliquer + 'au dé n°' + deSelectionne);
+            $('.flex-container > div:nth-child(' + deSelectionne + ')').css('flex-grow', flexGrowAAppliquer);
+        });
+    });
 
 </script>
 </body>
