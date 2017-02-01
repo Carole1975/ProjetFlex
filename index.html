@@ -6,10 +6,10 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<h1 class = "deco">Démo Flex</h1>
+<h1>Démo Flex</h1>
 <div class="options">
 	<div>
-		<h2 class = "color">Container Options</h2>
+		<h2>Container Options</h2>
 		<label for="changerDirection">flex-direction</label>
 		<select id="changerDirection">
 			<option value="row">row</option>
@@ -26,7 +26,7 @@
 		</select>
 	</div>
 	<div>
-		<h2 class= "color">Items Options</h2>
+		<h2>Items Options</h2>
 		<label for="selectionnerDe">Sélectionner un dé</label>
 		<select id="selectionnerDe">
 			<option value=1>1</option>
@@ -51,40 +51,40 @@
 </div>
 
 <div class="flex-container">
-	<div class="de flex-item">1</div>
-	<div class="de flex-item">2</div>
-	<div class="de flex-item">3</div>
-	<div class="de flex-item">4</div>
-	<div class="de flex-item">5</div>
-	<div class="de flex-item">6</div>
+	<div class="de rouge"></div>
+	<div class="de orange"></div>
+	<div class="de jaune"></div>
+	<div class="de vert"></div>
+	<div class="de bleu"></div>
+	<div class="de indigo"></div>
 </div>
 
 
 <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
 <script type="text/javascript">
-	
 	$(document).ready(function(){
-		// changer les valeurs des propriétés du container
-		// propriété flex-direction
-		$('#changerDirection').change(function(){
-			var directionAAppliquer = $('#changerDirection').val();
-			$('.flex-container').css('flex-direction', directionAAppliquer);
-		});
-		// propriété align-items
-		$('#changerAlignItems').change(function(){
-			var alignItemAAppliquer = $('#changerAlignItems').val();
-			$('.flex-container').css('align-items', alignItemAAppliquer);
-		});
+        // changer les valeurs des propriétés du container
+        // propriété flex-direction
+        $('#changerDirection').change(function(){
+            var directionAAppliquer = $('#changerDirection').val();
+            $('.flex-container').css('flex-direction', directionAAppliquer);
+        });
+        // propriété align-items
+        $('#changerAlignItems').change(function(){
+            var alignItemAAppliquer = $('#changerAlignItems').val();
+            $('.flex-container').css('align-items', alignItemAAppliquer);
+        });
 
-		// changer les valeurs des propriétés des items
-		// propriété flex-grow
-		$('#changerFlexGrow').change(function(){
-			var flexGrowAAppliquer = $('#changerFlexGrow').val();
-			var deSelectionne = $('#selectionnerDe').val();
-			console.log('appliquer une valeur flex-grow de ' + flexGrowAAppliquer + 'au dé n°' + deSelectionne);
-			$('.flex-container > div:nth-child(' + deSelectionne + ')').css('flex-grow', flexGrowAAppliquer);
-		});
-	});
+        // changer les valeurs des propriétés des items
+        // propriété flex-grow
+        $('#changerFlexGrow').change(function(){
+            var flexGrowAAppliquer = $('#changerFlexGrow').val();
+            var deSelectionne = $('#selectionnerDe').val();
+            console.log('appliquer une valeur flex-grow de ' + flexGrowAAppliquer + 'au dé n°' + deSelectionne);
+            $('.flex-container > div:nth-child(' + deSelectionne + ')').css('flex-grow', flexGrowAAppliquer);
+        });
+    });
+
 </script>
 </body>
 </html>
